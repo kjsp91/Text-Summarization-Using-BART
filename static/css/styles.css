@@ -1,0 +1,41 @@
+header{
+    text-align:center
+}
+header h1{
+    color:midnightblue
+}
+header p{
+    font-size:x-large
+}
+form{
+    display:inline-block;
+}
+form textarea{
+    width:600px;
+    height:400px;
+    font-size:larger;
+  
+}
+form button{
+    background-color:green;
+    padding:10px;
+    color:white;
+    font-size:large;
+    font-weight:bold;
+    border-radius:5px;
+    border:none;
+    position:relative;
+    left:490px
+}
+::placeholder{
+    font-size:larger
+}
+.summary{
+    border:1px solid gray;
+    font-size:larger;
+    display:inline-block;
+    position:absolute;
+    margin:0px;
+    width:600px;
+    height:400px
+}

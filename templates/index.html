@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Text Summarization</title>
+</head>
+<body>
+<header>
+    <h1>Text Summarizer</h1>
+    <p>Get the accurate summary for your text</p>
+</header>
+    <form method="post" action="/summarize">
+        <textarea name="text" id="text" rows="5" cols="50" placeholder="Copy and Paste or type your text here">{% if text %}{{ text }}{% endif %}</textarea>
+        <textarea>{% if summarized_text1 %}{{summarized_text1}}{% endif %}</textarea>
+        <!--<textarea>{% if summarized_text2 %}{{summarized_text2}}{% endif %}</textarea>-->
+        <br>
+        <button type="submit">Summarize</button>
+         {% if hallucination1 %}<h2>Hallucinated Words :</h2><p>{{ hallucination1 }}</p>{% endif %}
+         <!--{% if hallucination2 %}<h2>Hallucinated Words :</h2><p>{{ hallucination2 }}</p>{% endif %}-->
+    </form>
+
+   <!-- {% if text %}
+        <h2>Input Text:</h2>
+        <p>{{ text }}</p>
+    {% endif %}-->
+      <!-- <h2>Summarized Text:</h2>-->
+      <!-- <p class="summary">{{ summarized_text }}</p>-->
+     
+    <!-- {% if hallucinations %}
+         <h2>Hallucinated Words :</h2>
+         <p>{{ hallucinations }}</p>
+     {% endif %}-->
+</body>
+</html>
